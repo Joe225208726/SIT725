@@ -1,0 +1,58 @@
+body {
+    background-color: #d77c7c;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+nav {
+    background-color: #bf6363;
+    padding: 10px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.banner {
+    margin: 20px auto;
+}
+
+.live-demo {
+    width: 300px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-footer {
+    text-align: center;
+}
