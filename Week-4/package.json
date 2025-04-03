@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Joe225208726/SIT725#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1"
   }
 }
