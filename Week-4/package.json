@@ -1,0 +1,22 @@
+{
+  "name": "week-3",
+  "version": "1.0.0",
+  "description": "Bootstraping Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joe225208726/SIT725.git"
+  },
+  "author": "SIT725",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joe225208726/SIT725/issues"
+  },
+  "homepage": "https://github.com/Joe225208726/SIT725#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
