@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIT 725 Week 3</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper red lighten-2">
+      <a href="#" class="brand-logo"><img src="user-avatar.png" alt="User" class="user-icon" style="height:40px; padding:5px;"></a>
+      <ul class="right">
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container center-align">
+    <h2>Welcome to SIT 725 Week 3</h2>
+    <p>This is a demo application that tries to use a few components from Materialize and through this practical we try to have some fun with Materialize and its components</p>
+
+    <!-- Banner Image -->
+    <div class="banner">
+      <img src="live-demo.png" alt="Live Demo" class="responsive-img" style="max-width: 300px;">
+    </div>
+
+    <!-- Buttons -->
+    <div style="margin: 20px 0;">
+      <button class="btn red modal-trigger" data-target="modal1">CLICK ME</button>
+      <button class="btn red" id="seedDatabaseBtn">Seed Database</button>
+    </div>
+
+    <!-- Dynamic Products -->
+    <div class="row product-container"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Form</h4>
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" id="first_name" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" id="last_name" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="password" id="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="email" id="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn green modal-close">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- Materialize & Custom Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modals = document.querySelectorAll('.modal');
+      M.Modal.init(modals);
+
+      // Seed DB button
+      document.getElementById('seedDatabaseBtn').addEventListener('click', function () {
+        fetch('/api/products/seed')
+          .then(response => response.text())
+          .then(data => {
+            M.toast({ html: data, classes: 'green' });
+          })
+          .catch(error => {
+            M.toast({ html: 'Error seeding database: ' + error, classes: 'red' });
+          });
+      });
+    });
+  </script>
+  <script src="js/scripts.js" defer></script>
+</body>
+</html>

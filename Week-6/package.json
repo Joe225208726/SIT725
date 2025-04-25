@@ -1,0 +1,31 @@
+{
+  "name": "week-3",
+  "version": "1.0.0",
+  "description": "Bootstraping Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joe225208726/SIT725.git"
+  },
+  "author": "SIT725",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joe225208726/SIT725/issues"
+  },
+  "homepage": "https://github.com/Joe225208726/SIT725#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^11.1.0",
+    "supertest": "^7.1.0"
+  }
+}
